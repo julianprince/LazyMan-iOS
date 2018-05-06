@@ -82,6 +82,8 @@ class GameListViewController: UIViewController, GameListViewControllerType
     override func loadView()
     {
         super.loadView()
+        self.league = SettingsManager.shared.defaultLeague
+        self.leagueControl.selectedSegmentIndex = SettingsManager.shared.defaultLeague == .NHL ? 0 : 1
         self.splitViewController?.delegate = self
         self.calendar.scope = .week
         self.weekFormatter.dateFormat = "EEEE  MMMM d, yyyy"

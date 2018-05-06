@@ -54,13 +54,13 @@ class GameViewController: UIViewController, GameViewControllerType
         
         self.webView = WKWebView(frame: self.webViewContainer.frame, configuration: config)
         self.webView.navigationDelegate = self
-                self.webView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-                self.webView.translatesAutoresizingMaskIntoConstraints = false
-                self.webView.isOpaque = false
-                self.webView.backgroundColor = .black
-                self.webView.scrollView.isScrollEnabled = false
-                self.webView.allowsBackForwardNavigationGestures = false
-                self.webView.allowsLinkPreview = false
+        self.webView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.webView.translatesAutoresizingMaskIntoConstraints = false
+        self.webView.isOpaque = false
+        self.webView.backgroundColor = .black
+        self.webView.scrollView.isScrollEnabled = false
+        self.webView.allowsBackForwardNavigationGestures = false
+        self.webView.allowsLinkPreview = false
         
         self.webViewContainer.addSubview(self.webView)
     }
